@@ -57,6 +57,5 @@
   "keywords": ["sql", "mssql", "execute selection", "run query", "block select"],
   "author": "Hazel",
   "license": "MIT",
-  "icon": "images/RunSqlBlock.png",
   "repository": { "type": "git", "url": "https://github.com/iamhazel/run-sql-block" }
 }
