@@ -4,7 +4,7 @@ VS Code extension to select and execute the SQL block between blank lines (or op
 
 This is a recreation for VS Code of “Run Query Section” from [QE Boost](https://github.com/dzsquared/query-editor-boost) by [dzsquared](https://github.com/dzsquared) for Azure Data Studio.
 
-[Watch Demo](media/DemoRunSQLBlock.mov)
+[Watch Demo](media/demo-run-sql-block.mp4)
 
 ## Features
 
