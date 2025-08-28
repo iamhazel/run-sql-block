@@ -1,0 +1,62 @@
+{
+  "name": "run-sql-block",
+  "displayName": "Run SQL Block",
+  "description": "Selects the SQL block (between blank lines) under the cursor and runs it.",
+  "version": "0.0.1",
+  "publisher": "iamhazel",
+  "engines": { "vscode": "^1.90.0" },
+  "categories": ["Other"],
+  "contributes": {
+    "commands": [
+      {
+        "command": "runSqlBlock.execute",
+        "title": "Run SQL Block"
+      }
+    ],
+    "configuration": {
+      "title": "Run SQL Block",
+      "properties": {
+        "runSqlBlock.commandToRun": {
+          "type": "string",
+          "default": "mssql.runQuery",
+          "description": "Command to run after selecting the block. For MSSQL use 'mssql.runQuery'. For PostgreSQL use 'postgres.runQuery' (or your extension's command)."
+        },
+        "runSqlBlock.languages": {
+          "type": "array",
+          "default": ["sql", "mysql", "postgres", "tsql"],
+          "items": { "type": "string" },
+          "description": "Limit execution to these languages. Leave empty to allow all."
+        },
+        "runSqlBlock.treatGoAsSeparator": {
+          "type": "boolean",
+          "default": false,
+          "description": "If true, treat lines containing only 'GO' (case-insensitive) as block separators."
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "runSqlBlock.execute",
+        "key": "ctrl+shift+e",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "main": "./dist/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "tsc -p ./",
+    "watch": "tsc -w -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "1.90.0",
+    "@vscode/test-electron": "^2.5.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.9.2"
+  },
+  "keywords": ["sql", "mssql", "execute selection", "run query", "block select"],
+  "author": "Hazel",
+  "license": "MIT",
+  "icon": "images/RunSqlBlock.png",
+  "repository": { "type": "git", "url": "https://github.com/iamhazel/run-sql-block" }
+}

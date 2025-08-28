@@ -1,0 +1,17 @@
+# dev-only stuff
+.vscode/**
+src/**
+**/*.ts
+**/*.map
+tsconfig.json
+.vscode-test/**
+.github/**
+.git/**
+
+# big / irrelevant
+node_modules/**/test/**
+node_modules/**/docs/**
+node_modules/**/examples/**
+
+# meta
+.vscodeignore

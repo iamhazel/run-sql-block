@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+
+# build output (CI can build dist)
+dist/
+
+# VS Code workspace files (keep debug configs though)
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# packages/artifacts
+*.vsix
+
+# misc
+.DS_Store
+Thumbs.db
