@@ -2,10 +2,14 @@
   "name": "run-sql-block",
   "displayName": "Run SQL Block",
   "description": "Selects the SQL block (between blank lines) under the cursor and runs it.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "iamhazel",
-  "engines": { "vscode": "^1.90.0" },
-  "categories": ["Other"],
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
   "contributes": {
     "commands": [
       {
@@ -23,8 +27,15 @@
         },
         "runSqlBlock.languages": {
           "type": "array",
-          "default": ["sql", "mysql", "postgres", "tsql"],
-          "items": { "type": "string" },
+          "default": [
+            "sql",
+            "mysql",
+            "postgres",
+            "tsql"
+          ],
+          "items": {
+            "type": "string"
+          },
           "description": "Limit execution to these languages. Leave empty to allow all."
         },
         "runSqlBlock.treatGoAsSeparator": {
@@ -54,8 +65,17 @@
     "tslib": "^2.6.2",
     "typescript": "^5.9.2"
   },
-  "keywords": ["sql", "mssql", "execute selection", "run query", "block select"],
+  "keywords": [
+    "sql",
+    "mssql",
+    "execute selection",
+    "run query",
+    "block select"
+  ],
   "author": "Hazel",
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/iamhazel/run-sql-block" }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamhazel/run-sql-block"
+  }
 }
